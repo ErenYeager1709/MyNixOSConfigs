@@ -87,6 +87,7 @@
 	pkgs.zed-editor
 	wireguard-tools
 	proton-vpn
+	cosmic-store
 	rustup # After installation run "rustup install stable"
         inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default	
   ];
