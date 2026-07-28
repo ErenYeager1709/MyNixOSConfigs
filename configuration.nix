@@ -88,6 +88,7 @@
 	wireguard-tools
 	proton-vpn
 	cosmic-store
+	iw
 	rustup # After installation run "rustup install stable"
         inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default	
   ];
@@ -114,7 +115,19 @@
   services.upower = {
 	enable = true;
   };
+
+  services.flatpak = {
+    enable = true;
+
+    packages = [
+	"org.vinegarhq.Sober"
+    ];
+  };
   
+  programs.steam = {
+    enable = true;
+  };
+
   services.hydration-notifier = {
     enable = true;
 

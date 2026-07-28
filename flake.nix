@@ -8,6 +8,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hydration-notifier.url = "git+https://tangled.org/tobinio.dev/hydration-notifier";
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
   };
 
   outputs = { self, nixpkgs, ... }@inputs: {
@@ -18,6 +19,7 @@
       modules = [
         ./configuration.nix
         inputs.hydration-notifier.nixosModules.default
+	inputs.nix-flatpak.nixosModules.nix-flatpak
       ];
     };
   };
