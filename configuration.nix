@@ -91,6 +91,8 @@
 	hyprlock
 	hyprlauncher
 	waybar
+	wttrbar
+	gpu-usage-waybar
 	yazi
 	rustup # After installation run "rustup install stable"
         inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default	
@@ -107,9 +109,13 @@
   };
   
   services.displayManager.sddm = {
-	enable = true;
-	wayland.enable = true;
+	enable = false;
+	wayland.enable = false;
   };
+
+  services.dektopManager.cosmic.enable = true;
+
+  services.displayManager.cosmic-greeter.enable = true;
 
   services.power-profiles-daemon = {
 	enable = true;
