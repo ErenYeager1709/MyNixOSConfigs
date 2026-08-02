@@ -87,7 +87,6 @@
 	pkgs.zed-editor
 	wireguard-tools
 	proton-vpn
-	cosmic-store
 	iw
 	hyprlock
 	hyprlauncher
@@ -108,8 +107,8 @@
   };
   
   services.displayManager.sddm = {
-  enable = false;
-  wayland.enable = false;
+	enable = true;
+	wayland.enable = true;
   };
 
   services.power-profiles-daemon = {
@@ -151,12 +150,6 @@
   users.extraUsers.eren = {
 	shell = pkgs.fish;
   };
-
-  # Enable the COSMIC desktop
-  services.desktopManager.cosmic.enable = true;
-
-  # Enable the COSMIC login manager
-  services.displayManager.cosmic-greeter.enable = true;
 
 programs.starship = {
   enable = true;
