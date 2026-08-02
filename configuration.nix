@@ -113,7 +113,7 @@
 	wayland.enable = false;
   };
 
-  services.dektopManager.cosmic.enable = true;
+  services.desktopManager.cosmic.enable = true;
 
   services.displayManager.cosmic-greeter.enable = true;
 
