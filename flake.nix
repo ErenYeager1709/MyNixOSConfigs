@@ -15,6 +15,7 @@
     noctalia = {
       url = "github:noctalia-dev/noctalia/cachix";
     };
+    noctalia-greeter.url = "github:noctalia-dev/noctalia-greeter";
     hydration-notifier.url = "git+https://tangled.org/tobinio.dev/hydration-notifier";
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
   };
@@ -29,6 +30,7 @@
         inputs.hydration-notifier.nixosModules.default
 	inputs.nix-flatpak.nixosModules.nix-flatpak
 	inputs.noctalia.nixosModules.default
+	inputs.noctalia-greeter.nixosModules.default
       ];
     };
   };

@@ -88,11 +88,7 @@
 	wireguard-tools
 	proton-vpn
 	iw
-	hyprlock
-	hyprlauncher
 	waybar
-	wttrbar
-	gpu-usage-waybar
 	yazi
 	rustup # After installation run "rustup install stable"
         inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default	
@@ -115,7 +111,7 @@
 
   services.desktopManager.cosmic.enable = true;
 
-  services.displayManager.cosmic-greeter.enable = true;
+  services.displayManager.cosmic-greeter.enable = false;
 
   services.power-profiles-daemon = {
 	enable = true;
@@ -144,6 +140,20 @@
   programs.noctalia = {
     enable = true;
     systemd.enable = true;
+  };
+
+  programs.noctalia-greeter = {
+    enable = true;
+    # Optional: extra flags after `--` on noctalia-greeter-session
+    greeter-args = "";
+    # Full declarative greeter.toml (overwritten each activation). See examples/greeter.toml.
+    settings = {
+      cursor = {
+        theme = "Bibata-Modern-Ice";
+        size = 24;
+        path = "${pkgs.bibata-cursors}/share/icons";
+      };
+    };
   };
 
   services.hydration-notifier = {
