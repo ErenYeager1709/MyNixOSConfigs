@@ -137,6 +137,10 @@
     enable = true;
   };
 
+  programs.zoxide = {
+	enable = true;
+  };
+
   programs.noctalia = {
     enable = true;
     systemd.enable = true;
