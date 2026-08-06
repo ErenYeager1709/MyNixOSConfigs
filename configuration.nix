@@ -57,6 +57,7 @@
     description = "Eren Gülüm";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
+    shell = pkgs.fish;
   };
 
   # Bluetooth
@@ -83,8 +84,8 @@
 	discord
 	git
 	btop
-	pkgs.starship
-	pkgs.zed-editor
+	starship
+	zed-editor
 	wireguard-tools
 	proton-vpn
 	iw
@@ -169,11 +170,8 @@
       set fish_greeting
       
       starship init fish | source
+      alias zed zeditor
     '';
-  };
-
-  users.extraUsers.eren = {
-	shell = pkgs.fish;
   };
 
 programs.starship = {
