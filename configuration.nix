@@ -137,6 +137,11 @@
     enable = true;
   };
 
+  programs.noctalia = {
+    enable = true;
+    systemd.enable = true;
+  };
+
   services.hydration-notifier = {
     enable = true;
 
