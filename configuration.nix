@@ -94,6 +94,9 @@
 	rustup # After installation run "rustup install stable"
         inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default	
 	heroic
+	godotPackages_4_7.godot  
+	jetbrains.idea
+	bitwarden-desktop
   ];
  
   
@@ -141,7 +144,7 @@
 
   programs.noctalia = {
     enable = true;
-    systemd.enable = true;
+    systemd.enable = false;
   };
 
   programs.noctalia-greeter = {
