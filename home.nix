@@ -10,6 +10,8 @@
 
   home.stateVersion = "26.05";
 
+  home.file."Pictures/Screenshots/.keep".text = "";
+
   programs.kitty = {
     enable = true;
 
@@ -36,6 +38,13 @@
 
     shell = {
       launch_apps_as_systemd_services = true;
+      screenshot = {
+        save_to_file = true;
+        copy_to_clipboard = true;
+        freeze_screen = true;
+        show_cursor = false;
+        annotate = false;
+      };
     };
     
     widget = {
