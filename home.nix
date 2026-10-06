@@ -37,6 +37,14 @@
     shell = {
       launch_apps_as_systemd_services = true;
     };
+    
+    widget = {
+      privacy = {
+        type = "privacy";
+        hide_inactive = true;
+        icon_spacing = 6;
+      };
+    };
   };
 };
 }
