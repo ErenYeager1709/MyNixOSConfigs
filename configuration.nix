@@ -115,6 +115,8 @@
 	vlc
 	loupe
 	qalculate-gtk
+	_7zz
+	file-roller
   ];
  
   
