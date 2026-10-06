@@ -107,11 +107,18 @@
 	godotPackages_4_7.godot  
 	jetbrains.idea
 	bitwarden-desktop
+	obs-studio
+	gimp
+	onlyoffice-desktopeditors
+	ventoy-full-gtk
+	mission-center
+	vlc
+	loupe
+	qalculate-gtk
   ];
  
   
   services.system76-scheduler.enable = true;
-
   # Desktop Environments
   programs.hyprland = {
     enable = true;
@@ -143,7 +150,7 @@
 
     packages = [
 	"org.vinegarhq.Sober"
-	"org.kde.isoimagewriter"
+	"org.freedownloadmanager.Manager"
     ];
   };
   
