@@ -10,6 +10,35 @@
 
   home.stateVersion = "26.05";
 
+  home.packages = with pkgs; [
+    firefox
+    nautilus
+    discord
+    git
+    btop
+    zed-editor
+    proton-vpn
+    yazi
+    rustup # After installation run "rustup install stable"
+    heroic
+    godotPackages_4_7.godot
+    jetbrains.idea
+    bitwarden-desktop
+    obs-studio
+    gimp
+    onlyoffice-desktopeditors
+    mediawriter
+    mission-center
+    vlc
+    loupe
+    qalculate-gtk
+    _7zz
+    file-roller
+
+    inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
+  
+  ];
+
   home.file."Pictures/Screenshots/.keep".text = "";
 
   programs.kitty = {

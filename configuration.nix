@@ -89,34 +89,10 @@
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
-	firefox
-	nautilus
-	discord
-	git
-	btop
 	starship
-	zed-editor
 	wireguard-tools
-	proton-vpn
 	iw
 	waybar
-	yazi
-	rustup # After installation run "rustup install stable"
-        inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
-	heroic
-	godotPackages_4_7.godot  
-	jetbrains.idea
-	bitwarden-desktop
-	obs-studio
-	gimp
-	onlyoffice-desktopeditors
-	mediawriter
-	mission-center
-	vlc
-	loupe
-	qalculate-gtk
-	_7zz
-	file-roller
   ];
  
   
