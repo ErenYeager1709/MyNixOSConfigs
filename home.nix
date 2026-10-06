@@ -1,6 +1,10 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
+  imports = [
+    inputs.noctalia.homeModules.default
+  ];
+  
   home.username = "eren";
   home.homeDirectory = "/home/eren";
 
@@ -15,4 +19,24 @@
       cursor_trail_decay = "0.1 0.4";
     };
   };
+
+  programs.noctalia = {
+  enable = true;
+
+  settings = {
+    theme = {
+      mode = "dark";
+    };
+
+    bar = {
+      default = {
+        position = "top";
+      };
+    };
+
+    shell = {
+      launch_apps_as_systemd_services = true;
+    };
+  };
+};
 }

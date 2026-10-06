@@ -63,6 +63,10 @@
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
+    
+    extraSpecialArgs = {
+      inherit inputs;
+    };
 
     users.eren = import ./home.nix;
   };
@@ -98,7 +102,7 @@
 	waybar
 	yazi
 	rustup # After installation run "rustup install stable"
-        inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default	
+        inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
 	heroic
 	godotPackages_4_7.godot  
 	jetbrains.idea
@@ -150,7 +154,7 @@
 
   programs.noctalia = {
     enable = true;
-    systemd.enable = false;
+    systemd.enable = true;
   };
 
   programs.noctalia-greeter = {
@@ -166,6 +170,8 @@
       };
     };
   };
+
+  services.displayManager.noctalia-greeter.passwordless-sync-users = [ "eren" ];
 
   services.hydration-notifier = {
     enable = true;
