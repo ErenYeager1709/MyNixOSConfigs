@@ -110,7 +110,7 @@
 	obs-studio
 	gimp
 	onlyoffice-desktopeditors
-	ventoy-full-gtk
+	mediawriter
 	mission-center
 	vlc
 	loupe
