@@ -141,6 +141,7 @@
 
     packages = [
 	"org.vinegarhq.Sober"
+	"org.kde.isoimagewriter"
     ];
   };
   
