@@ -34,6 +34,7 @@
     qalculate-gtk
     _7zz
     file-roller
+    mpvpaper
 
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
   
@@ -84,6 +85,26 @@
         icon_spacing = 6;
       };
     };
+
+    plugins = {
+      enabled = [
+        "noctalia/mpvpaper"
+        "theblackdon/theme-switcher"
+      ];
+
+      auto_update = "all";
+    };
+
+    plugin_settings = {
+      "noctalia/mpvpaper" = {
+      video_directory = "${config.home.homeDirectory}/Videos/wallpapers";
+      mute = true;
+      hardware_decode = true;
+      auto_pause = "full";
+      mpv_options = "";
+      run_as_systemd = false;
+    };  
   };
+};
 };
 }
