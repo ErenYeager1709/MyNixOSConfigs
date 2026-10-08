@@ -69,6 +69,7 @@
       launch_apps_as_systemd_services = true;
       screenshot = {
         save_to_file = true;
+	directory = "~/Pictures/Screenshots";
         copy_to_clipboard = true;
         freeze_screen = true;
         show_cursor = false;
