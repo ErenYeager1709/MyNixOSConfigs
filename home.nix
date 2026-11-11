@@ -35,6 +35,7 @@
     _7zz
     file-roller
     mpvpaper
+    fastfetch
 
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
   
@@ -76,6 +77,10 @@
         show_cursor = false;
         annotate = false;
       };
+    };
+    
+    lockscreen = {
+	blurredDesktop = true;
     };
     
     widget = {
